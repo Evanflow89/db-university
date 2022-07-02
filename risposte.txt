@@ -1,0 +1,46 @@
+1^ Query:
+
+SELECT *
+FROM `students`
+WHERE `date_of_birth` BETWEEN '1990-01-01' AND '1990-12-31';
+
+2^ Query:
+
+SELECT *
+FROM `courses`
+WHERE `cfu` > '10';
+
+3^ Query:
+
+SELECT *
+FROM `students`
+WHERE EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM `date_of_birth`) > 30; 
+
+4^ Query:
+
+SELECT *
+FROM `courses`
+WHERE `period` = 'I semestre' AND `year` = '1';
+
+5^ Query:
+
+SELECT *
+FROM `exams`
+WHERE `date` = '2020-06-20' AND `hour` > '14:00:00';
+
+6^ Query:
+
+SELECT *
+FROM `degrees`
+WHERE `name` LIKE '%Magistrale%';
+
+7^ Query:
+
+SELECT COUNT(`id`) AS Dipartimenti
+FROM `departments`;
+
+8^ Query:
+
+SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL; 
